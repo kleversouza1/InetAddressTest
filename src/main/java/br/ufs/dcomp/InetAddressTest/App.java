@@ -13,11 +13,10 @@ public class App
         try{
             
             String name = "google.com";
-            InetAddress address[] = InetAddress.getAllByName(name); 
+            InetAddress address = InetAddress.getByName(name); //verto de endreços para pegar ips
             System.out.println( "Name:      "+ name);
-            for (int i =0; i < address.length; i++){
-               System.out.println( "Address:   "+ address[i].getHostAddress());
-            }   
+            
+            System.out.println( "Address:   "+ address.getHostAddress()); // exibe os ips gethostadds 
         } catch (UnknownHostException e){
             System.out.println(e.getMessage());
         }                
